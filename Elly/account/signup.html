@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEFA</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+    <div class="form" id="form">
+        <img src="/images/Logo.jpg" class="logo">
+        <h3>Sign Up</h3>
+        <form>
+            <div class="input-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname" placeholder="Enter First Name">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter Email">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password">
+                <div class="error"></div>
+            </div>
+            <div class="input-group">
+                <label for="position_played">Position Played</label>
+                <select name="position_played">
+                    <option>-- Select Position --</option>
+                    <option>Left Back</option>
+                    <option>Midfielder</option>
+                    <option>Right Back</option>
+                    <option>Center Back</option>
+                    <option>Winger</option>
+                    <option>Coach</option>
+                    <option>Assistant Coach</option>
+                    <option>Goalkeeper</option>
+                    <option>Deep Six</option>
+                    <option>Left Winger</option>
+                </select>
+                <div class="error"></div>
+            </div>
+            <div>
+                <a href="signin.html">Have an account?</a>
+            </div>
+            <div class="btn-group">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+
+    <script src="signup.js"></script>
+</body>
+</html>
