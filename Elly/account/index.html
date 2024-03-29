@@ -1,92 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar .main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar ul li {
+            margin-right: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: gold;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background-color: #444;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+
+        h4 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
-		<div class="main">
-<div class="logo">
-	<!-- <img src="/images/Logo.jpg"> -->
-</div>
-			<ul>
-				<li class="active"><a href="#">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="signup.html">Sign Up</a></li>
-				<li><a href="signin.html">Sign In</a></li>
-				<li><a href="https://www.premierleague.com/">EPL</a></li>
-				<li><a href="https://www.laliga.com/en-GB">LALIGA</a></li>
-				<li><a href="https://www.bundesliga.com/en/bundesliga" target="_blank">BUNDESLIGA</a></li>
-</div>
-<div class="title">
-	<h1>TOP TEN BEST TEAMS</h1>
-</div>
-<div class="button">
-	<a href="#" classs="btn">REAL MADRID</a>
-<a href="#" classs="btn">NAPOLI</a>
-<a href="#" classs="btn">MAN CITY</a>
-<a href="#" classs="btn">BAYERN MUNICH</a>
-<a href="#" classs="btn">CHELSEA</a>
-<a href="#" classs="btn">PSG</a>
-<a href="#" classs="btn">BARCELONA</a>
-<a href="#" classs="btn">Ajax</a>
-<a href="#" classs="btn">AC MILAN</a>
-<a href="#" classs="btn">LIVERPOOL</a>
-</div>
-	</header>
-	<br>
-	<table border="1" cellpadding="1" cellspacing="1" align="center">
-		<h4 align="center" box-shadow="bold">EMPLOYEES INFORMATION</h4>
-<tr>
-	<th>NAME</th>
-	<th>ID Number</th>
-	<th>Job title</th>
-	<th>Phone number</th>
-	<th>Email</th>
-	<th>Age</th>
-	<th>Salary</th>
-	<th>Department</th>
-</tr>
+        <div class="navbar">
+            <div class="main">
+                <div class="logo">
+                    <img src="/img/ball.png" alt="Logo">
+                </div>
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="title">
+            <h1>BEST TEAMS IN THE WORLD</h1>
+        </div>
+        <div class="button">
+            <a href="#" class="btn">ARSENAL</a>
+            <a href="#" class="btn">REAL MADRID</a>
+            <a href="#" class="btn">MAN CITY</a>
+            <a href="#" class="btn">BAYERN MUNICH</a>
+            <a href="#" class="btn">PSG</a>
+            <a href="#" class="btn">BARCELONA</a>
+            <a href="#" class="btn">LIVERPOOL</a>
+        </div>
+    </header>
+    <br>
+    <table border="1" cellpadding="1" cellspacing="1" align="center">
+        <caption>
+            <h4>FOOTBALL CLUBS INFORMATION</h4>
+        </caption>
+        <tr>
+            <th>Club Name</th>
+            <th>Country</th>
+            <th>League</th>
+            <th>Trophies</th>
+        </tr>
+		<tr>
+            <td>Real Madrid</td>
+            <td>Spain</td>
+            <td>La Liga</td>
+            <td>35</td>
+        </tr>
+		<tr>
+            <td>Bayern Munich</td>
+            <td>Germany</td>
+            <td>Bundesliga</td>
+            <td>31</td>
+        </tr>
+		<tr>
+            <td>Barcelona</td>
+            <td>Spain</td>
+            <td>La Liga</td>
+            <td>26</td>
+        </tr>
+		<tr>
+            <td>Liverpool</td>
+            <td>England</td>
+            <td>Premier League</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>Arsenal</td>
+            <td>England</td>
+            <td>Premier League</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>Manchester City</td>
+            <td>England</td>
+            <td>Premier League</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Paris Saint-Germain</td>
+            <td>France</td>
+            <td>Ligue 1</td>
+            <td>9</td>
+        </tr>
+    </table>
 
-	<th>Alboss</th>
-	<th>1122</th>
-	<th>chief Auditor</th>
-	<th>0759612770</th>
-	<th>alboss@gmail.com</th>
-	<th>23</th>
-	<th>$1000</th>
-	<th>DPT1</th>
-</tr>
-
-
-<tr>
-	<th>ELLY</th>
-	<th>11224</th>
-	<th>Assistant Manager</th>
-	<th>078997643</th>
-	<th>elly@yahoo.com</th>
-	<th>23</th>
-	<th>$1200</th>
-	<th>Dpt3</th>
-</tr>
-
-<tr>
-	<th>Rickcharlies</th>
-	<th>112256</th>
-	<th>general director</th>
-	<th>071234567</th>
-	<th>rick@gmail.com</th>
-	<th>25</th>
-	<th>$1100</th>
-	<th>Dept2</th>
-</tr>
-</div>
-
-</table>
-
+    <footer>
+        <p>&copy; 2024 Best Teams in the World. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

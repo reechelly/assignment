@@ -3,67 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="/css/about.css">
+    <title>About Us - Best Teams in the World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar .main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar ul li {
+            margin-right: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+		.navbar ul li a .active{
+			color: gold;
+		}
+
+        .navbar ul li a:hover {
+            color: gold;
+        }
+
+        .title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .content h2 {
+            margin-top: 30px;
+        }
+
+        .content ul {
+            margin-left: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div class="Navbar">
-		<div class="container">
-		</div>
-	<nav>
-	    <a href="index.html">Home</a>
-	    <a href="signup.html">Sign Up</a>
-	    <a href="signin.html">Sign In</a>
-    </nav>
+    <header>
+        <div class="navbar">
+            <div class="main">
+                <div class="logo">
+                    <img src="/img/ball.png" alt="Logo">
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="title">
+            <h1>About Us</h1>
+        </div>
+    </header>
+    <div class="content">
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide a platform where sports enthusiasts can come together to learn, discuss, and cheer for their favorite teams.</p>
 
-	<h1>It's time to enjoy football</h1>
-	<p><pre>As the sun dipped low on the horizon, casting a warm glow across the stadium, anticipation crackled in the air like electricity. 
-        Fans streamed into the stands, their faces painted in team colors, voices rising in excited chatter. There's a magic in the moments before a football game begins—a palpable energy that unites strangers and friends alike. 
-        The stadium echoed with the sound of drums and chants, creating a symphony of support that reverberated through the hearts of all who were there.
-        As the whistle blew, the stadium erupted into a frenzy of movement and sound. Players dashed across the field, their skill and agility a testament to years of dedication and training.
-         With each pass, each tackle, the crowd roared in approval, their cheers swelling to a crescendo with every goal scored. 
-         In those exhilarating moments, it didn't matter who you were or where you came from; all that mattered was the game unfolding before you—a spectacle of athleticism and passion that transcended language and borders.     
-        But perhaps the true beauty of watching football games lies not just in the action on the field, but in the connections forged off it. Amidst the sea of faces, friendships blossomed and memories were made. 
-        Strangers became comrades, united in their love for the game and the camaraderie it inspired. And as the final whistle blew and the crowd began to disperse, there lingered a sense of joy and camaraderie—a reminder that, 
-        in a world often divided, there are moments of unity and togetherness that can be found in the simplest of pleasures, like watching a football game.
-    </pre>   
-	</p>
+        <h2>What We Offer</h2>
+        <ul>
+            <li>Team Profiles</li>
+            <li>Latest News</li>
+            <li>Interactive Experience</li>
+            <li>Exclusive Content</li>
+        </ul>
 
+        <h2>Our Team</h2>
+        <p>Our team comprises passionate sports enthusiasts who are dedicated to delivering accurate, engaging, and informative content for fans worldwide.</p>
 
-	<img src="/images/Logo.jpg" text-align="center">
+        <h2>Connect With Us</h2>
+        <p>Join us on social media platforms to stay connected, share your love for your favorite teams, and participate in exciting contests and events.</p>
+    </div>
 
-	<!--list-->
-	<h2>Book your flight for Soccer Games</h2>
-	<table border="1" cellpadding="1" cellspacing="1"height="150" width="500" align="center">
-		<tr>
-			<td>Monday 7:30am-9:3am</td>
-		<td>flight from Entebbe</td>
-	</tr>
-	<tr>
-		<td>Tuesday 8:30am-10:30pm</td>
-		<td>flight from Cairo</td>
-	</tr>
-	<tr>
-		<td>Wednesday 8:00am-9:30am</td>
-		<td>flight to London</td>
-	</tr>
-	<tr>
-		<td>Thursday 10:00am-5:00pm</td>
-		<td>flight to Munich</td>
-	</tr>
-	<tr>
-		<td>Friday 7:00pm-12:00am</td>
-		<td>flight to Madrid</td>
-	</tr>
-	<tr>
-		<td>Saturday 11:00am-12:30pm</td>
-		<td>flight to Paris</td>
-	</tr>
-</table>
-	</ul>
-	<br>
-	<br>
-	<br>
-
+    <footer>
+        <p>&copy; 2024 Best Teams in the World. All rights reserved.</p>
+    </footer>
 </body>
 </html>

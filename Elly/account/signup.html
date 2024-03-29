@@ -5,59 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UEFA</title>
     <link rel="stylesheet" href="/css/signup.css">
+    <style>
+        body {
+            background-image: url("/img/uefa.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .navbar {
+            background: transparent;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .form {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 50%;
+            max-width: 400px;
+            box-shadow: 0px 0px 10px rgba(110, 112, 251, 0.2);
+        }
+        .logo {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 8px;
+            color: white;
+            border-radius: 5px;
+            border: 0.5px dashed #ccc;
+            box-sizing: border-box;
+            background: transparent;
+        }
+        .input-group .error {
+            color: red;
+            margin-top: 5px;
+        }
+        .btn-group {
+            text-align: center;
+        }
+        .btn-group input {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+        }
+        .btn-group input[type="reset"] {
+            background-color: #dc3545;
+        }
+    </style>
 </head>
 <body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Contact</a>
+    </div>
+
     <div class="form" id="form">
-        <img src="/images/Logo.jpg" class="logo">
+        <img src="/img/ball.png" class="logo">
         <h3>Sign Up</h3>
-        <form>
+        <form action="process_form.php" method="POST">
             <div class="input-group">
                 <label for="firstname">First Name</label>
-                <input type="text" id="firstname" name="firstname" placeholder="Enter First Name">
+                <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" required>
                 <div class="error"></div>
             </div>
             <div class="input-group">
                 <label for="lastname">Last Name</label>
-                <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name">
+                <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" required>
                 <div class="error"></div>
             </div>
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Enter Email">
-                <div class="error"></div>
-            </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter Password">
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
                 <div class="error"></div>
             </div>
             <div class="input-group">
                 <label for="position_played">Position Played</label>
-                <select name="position_played">
-                    <option>-- Select Position --</option>
-                    <option>Left Back</option>
-                    <option>Midfielder</option>
-                    <option>Right Back</option>
-                    <option>Center Back</option>
-                    <option>Winger</option>
-                    <option>Coach</option>
-                    <option>Assistant Coach</option>
-                    <option>Goalkeeper</option>
-                    <option>Deep Six</option>
-                    <option>Left Winger</option>
+                <select id="position_played" name="position_played" required>
+                    <option value="" disabled selected>-- Select Position --</option>
+                    <option value="Left Back">Left Back</option>
+                    <option value="Midfielder">Midfielder</option>
+                    <option value="Right Back">Right Back</option>
+                    <option value="Center Back">Center Back</option>
+                    <option value="Winger">Winger</option>
+                    <option value="Coach">Coach</option>
+                    <option value="Assistant Coach">Assistant Coach</option>
+                    <option value="Goalkeeper">Goalkeeper</option>
+                    <option value="Deep Six">Deep Six</option>
+                    <option value="Left Winger">Left Winger</option>
                 </select>
                 <div class="error"></div>
             </div>
-            <div>
-                <a href="signin.html">Have an account?</a>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <div class="error"></div>
             </div>
             <div class="btn-group">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
             </div>
+            <div>
+                <a href="signin.html">Have an account?</a>
+            </div>
         </form>
+        
     </div>
-
 
     <script src="signup.js"></script>
 </body>
