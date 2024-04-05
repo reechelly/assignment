@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Hub - Teams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Reset */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar ul li {
+            margin-right: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li.active a {
+            color: gold;
+        }
+
+        .navbar ul li a:hover {
+            color: gold;
+        }
+
+        /* Teams Page */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .team-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .team-list-item {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .team-list-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="main">
+                <div class="logo">
+                    <img src="../img/logo.jpeg" alt="Logo">
+                </div>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li class="active"><a href="#"><i class="fas fa-users"></i> Teams</a></li>
+                    <li><a href="about.html"><i class="fas fa-layer-group"></i> About</a></li>
+                    <li><a href="signin.php"><i class="fas fa-user"></i> Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Teams</h1>
+        <ul class="team-list">
+            <li class="team-list-item">
+                <img src="../img/real.jpg" alt="">
+                <h3>Real Madrid</h3>
+                <p> It was founded on March 6, 1902, and has since become one of the most successful and widely supported football clubs in the world.</p>
+                <p><strong>Country:</strong> Spain</p>
+                <p><strong>League:</strong> La Liga</p>
+                <p><strong>Trophies:</strong> 35</p>
+            </li>
+            <li class="team-list-item">
+                <img src="../img/bayern.jpg" alt="">
+                <h3>Bayern Munich</h3>
+                <p>Bayern Munich was founded in 1900 and has become Germany's most famous and successful football club. Almost all of Bayern's success has come since the 1960s.</p>
+                <p><strong>Country:</strong> Germany</p>
+                <p><strong>League:</strong> Bundesliga</p>
+                <p><strong>Trophies:</strong> 35</p>
+            </li>
+            <li class="team-list-item">
+                <img src="../img/barcelona.jpeg" alt="">
+                <h3>Barcelona</h3>
+                <p>Based in Barcelona, Catalonia, Spain, the club was founded in 1899 by a group of Swiss, English, German, and Catalan footballers. Barcelona is known for its distinctive style of play, often characterized by possession-oriented football, intricate passing, and high pressing.</p>
+                <p><strong>Country:</strong> Germany</p>
+                <p><strong>League:</strong> Bundesliga</p>
+                <p><strong>Trophies:</strong> 31</p>
+            </li>
+            <!-- Add more team list items as needed -->
+        </ul>
+    </div>
+
+    <div class="container">
+        <ul class="team-list">
+            <li class="team-list-item">
+                <img src="../img/arsenal.jpg" alt="">
+                <h3>Arsenal</h3>
+                <p> The Arsenal Football Club, commonly known as Arsenal, is an English professional football club based in Holloway, North London.</p>
+                <p><strong>Country:</strong> England</p>
+                <p><strong>League:</strong> Premior League</p>
+                <p><strong>Trophies:</strong> 32</p>
+            </li>
+            <li class="team-list-item">
+                <img src="../img/manchester-united.jpg" alt="">
+                <h3>Manchester united</h3>
+                <p>Manchester united was founded in 1900 and has become Germany's most famous and successful football club. Almost all of Bayern's success has come since the 1960s.</p>
+                <p><strong>Country:</strong> England</p>
+                <p><strong>League:</strong> Premier league</p>
+                <p><strong>Trophies:</strong> 35</p>
+            </li>
+            <li class="team-list-item">
+                <img src="../img/chelsea.jpg" alt="">
+                <h3>Chelsea</h3>
+                <p>Chelsea Football Club is an English professional football club based in Fulham, West London. Founded in 1905, the team play their home games at Stamford Bridge. The club competes in the Premier League, the top division of English football.</p>
+                <p><strong>Country:</strong> England</p>
+                <p><strong>League:</strong> Premier League</p>
+                <p><strong>Trophies:</strong> 31</p>
+            </li>
+            <!-- Add more team list items as needed -->
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Best Teams in the World. All rights reserved.</p>
+    </footer>
+</body>
+</html>

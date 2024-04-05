@@ -1,23 +1,30 @@
 <?php
     include 'connection.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["submit"])) {
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+        $email = $_POST['email'];
+        $position_played = $_POST['position_played'];
+        $password = $_POST['password'];
 
-    $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
-    $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $position_played = mysqli_real_escape_string($conn, $_POST['position_played']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+        $stmt = mysqli_prepare($conn, "SELECT * FROM users WHERE email=?");
+        mysqli_stmt_bind_param($stmt, "s", $email);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_store_result($stmt);
 
-    $sql = "INSERT INTO users (firstname, lastname, email, position_played, password)
-            VALUES ('$firstname', '$lastname', '$email', '$position_played', '$password')";
+        if (mysqli_stmt_num_rows($stmt) > 0) {
+            echo "<script>alert('Email Already Taken!')</script>";
+        } else {
+            $insertStmt = mysqli_prepare($conn, "INSERT INTO users (firstname, lastname, email, position_played, password) VALUES (?,?,?,?,?)");
+            mysqli_stmt_bind_param($insertStmt, "ssss", $firstname, $lastname, $email, $position_played, $password);
 
-    if (mysqli_query($conn, $sql)) {
-        echo "Records added successfully.";
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            if (mysqli_stmt_execute($insertStmt)) {
+                echo "<script>alert('Registration Successful!')</script>";
+            } else {
+                echo "<script>alert('Registration Failed!')</script>";
+            }
+        }
+        mysqli_stmt_close($stmt);
     }
-
-    mysqli_close($conn);
-}
 ?>

@@ -18,16 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
-            header("Location: dashboard.php");
+            header("Location: ../home/user.html");
             exit();
         } else {
             $_SESSION['login_error'] = "Invalid password. Please try again.";
-            header("Location: login.php");
+            header("Location: ../account/signin.html");
             exit();
         }
     } else {
         $_SESSION['login_error'] = "User not found. Please check your email.";
-        header("Location: login.php");
+        header("Location: ../account/signin.html");
         exit();
     }
 
